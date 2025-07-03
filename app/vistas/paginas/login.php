@@ -22,7 +22,7 @@
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-4">
-          <img class="mt_per_logo" src='' alt='logo de camara'>
+          <img class="mt_per_logo" src='' alt='logo'>
           <div class="card p-4 mt_per card-transp">
             <h1 class="titulo-sistema">
               <?php echo TITULO_SISTEMA ?>
