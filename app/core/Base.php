@@ -126,7 +126,7 @@ class Base
 		}
 		return $retorno;
 	}
-
+	
 	/**
 	 * Devuelve un array con todos los registros de la ultima consulta.
 	 * devuelve un array vacio en caso de no tener ningun registro
@@ -139,7 +139,6 @@ class Base
 		}
 		return $retorno;
 	}
-
 	/** se refactorizo la funcion
 	 * Devuelve un array con toda la tabla ordenado por el la columna clave ASC
 	 * Devuelve un array vacio en caso de no tener registros

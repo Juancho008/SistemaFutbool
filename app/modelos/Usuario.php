@@ -158,4 +158,10 @@ class Usuario extends Base
 		$this->consultar("SELECT * from $this->tabla where usuario='$nombre'");
 		return $this->obtenerRegistro();
 	}
+
+	public function obtenerNombreUsuario($id){
+		$id = $this->escapar($id);
+		$this->consultar("SELECT nombre, apellido from $this->tabla where id = $id");
+		return $this->obtenerRegistro();
+	}
 }
