@@ -1,0 +1,25 @@
+{
+    "name": "openmvc/framephp",
+    "description": "MVC framework for PHP",
+    "type": "proyecto",
+    "authors": [
+        {
+            "name": "Juan Espindola",
+            "email": "juanignacioespindola08@gmail.com"
+        },
+        {
+            "name": "Antonella Espindola",
+            "email": "antoe300@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "components/jquery": "^3.5",
+        "components/jqueryui": "^1.12",
+        "components/bootstrap": "^4.5"
+    },
+    "config": {
+        "component-dir": "public/lib",
+        "component-baseurl": "/lib"
+    }
+}
