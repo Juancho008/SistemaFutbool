@@ -1,0 +1,23 @@
+.bg-rellenar{
+    background-color: gray;
+}
+
+#contentModalRevisar{   
+    width: 70vw !important;
+}
+
+#dialogModalRevisar{
+    margin-right: 50vw !important;
+}
+
+#colDetallesPedido{
+    width: 30;
+}
+
+#contentModalModificar{
+    width: 40vw !important;
+}
+
+#dialogModalModificar{
+    margin-right: 35vw !important;
+}

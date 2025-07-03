@@ -16,34 +16,71 @@ CSS especifico del proyecto
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
 }
-
+/* header usuario y boton salir*/ 
 #header-info {
   grid-row: 1 / span 1;
   grid-column: 1 / span 2;
   background: var(--paleta-color-1);
   text-align: right;
   font-size: 0.8em;
+  padding-bottom: 0.5rem;
 }
 
-#menu {
-  grid-row: 2 / span 1;
-  grid-column: 1 / span 2;
+.salir-btn{
+  background:rgb(237, 0, 0); ;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:30px;
+  font-size:0.8em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 5px;
 }
+
+.salir-btn:hover{
+  background-color: rgba(164, 0, 0, 0.838);
+  backdrop-filter: blur(10px);
+}
+.salir-btn a:hover{
+  color:rgb(255, 255, 255) ;
+}
+.salir-btn:before,.salir-btn::after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: rgb(255, 255, 255);
+  transition:400ms ease all;
+}
+
+.salir-btn::after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+
+.salir-btn:hover:before,.salir-btn:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+/*fin de header usuario y boton salir*/
 
 .usuario-conectado,
 .boton-salir {
   font-size: 1.5rem;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
   padding-bottom: 0;
   margin-bottom: 0;
   color: var(--color-letra-claro);
 }
 
 #container {
-  /* se quito para poder cargar muchas vistas
-  grid-row: 2 / span 1;
-  grid-column: 2 / span 1;
-  */
   padding: 15px;
 }
 
@@ -54,44 +91,63 @@ CSS especifico del proyecto
   background: var(--paleta-color-1);
   color: var(--color-letra-claro);
 }
+
 /*CSS del Menu*/
-.menu {
-  /* grid-row: 2 / span 1;
-  grid-column: 1 / span 1; */
-  background: var(--color-fondo-basico);
-  padding: 0;
-  margin: 0;
-  font-size: 0.8em;
-  z-index: 40;
+
+#menu {
+  height: 120vh;
+  width: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-decoration: none!important;
+  transition: 0.5s;
+  padding-top: 60px;
+  white-space: nowrap;
+  z-index:200;
+}
+#menu-sistema{
+  width: 55px;
+  transition: 0.5s;
+
+}
+.sidebar-ul{
+  list-style: none;
+  text-decoration: none!important;
 }
 
-.menu .d-none {
-  display: inline !important;
+.sidebar-navbar-center{
+  margin-top: -45vh;
 }
 
-.submenu a,
-.menu-item {
-  background: var(--color-fondo-menu);
-}
-
-.menu .nav-item a:hover,
-.menu .nav-link:hover {
-  background: var(--color-hover-menu);
-}
-.submenu a span,
-.menu-item span {
+.sidebar-text a span,
+.sidebar-text span {
   color: var(--color-letra-claro);
+  transition: all 0.3s;
+  padding: 12px 12px 12px 15px;
+  text-decoration: none !important;
+  list-style: none;
+  font-size: 18px;
+  display: block;
 }
-
-.submenu2 .nav-item a {
-  background: var(--color-fondo-submenu);
-  padding-left: 5px;
-  z-index: 50;
+.sidebar-simbolo{
+  color: #fff;
+  font-size: 20px;
 }
-
-.nav-link {
-  font-size: 1rem;
-  border-right: 1px solid white;
+.sidebar-text a span:hover,
+.sidebar-text span:hover{
+  text-decoration: none!important;
+  color: #0099ff;
+}
+a:hover{
+  text-decoration: none;
+}
+#main{
+  transition: all 0.3s;
+  position: absolute;
+  margin-top: 5vh;
+  margin-left: 10vw;
+  width: 85vw;
 }
 /*Fin CSS del Menu*/
 
@@ -100,24 +156,4 @@ CSS especifico del proyecto
   font-weight: bold;
   color: var(--color-letra-principal);
   width: 100%;
-}
-
-.transicion {
-  width: 100%;
-  height: 100vh;
-  background: #ccc;
-  position: fixed;
-  z-index: 1500;
-  text-align: center;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
-  display: none;
-}
-
-.transicion .transicion-mensaje{
-  width: 95%;
-  max-width: 600px;
-  margin: auto;
 }

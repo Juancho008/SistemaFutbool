@@ -11,6 +11,47 @@ function checkear(obj) {
   }
 }
 
+const postApi = async (url, data = {}) => {
+  return fetch(url, {
+    method: "POST",
+    mode: "cors", 
+    cache: "no-cache", 
+    credentials: "same-origin",
+    headers: {
+      "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+      Accept: "application/json",
+    },
+    credentials: "include",
+    body: "data=" + JSON.stringify(data),
+  });
+};
+
+/* const getApi = (url) => {
+  return fetch(url, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+  });
+};
+
+const postApi = async (url, data = {}) => {
+  return fetch(url, {
+    method: "POST",
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+      Accept: "application/json",
+      //"Content-Type": "application/json",
+    },
+    credentials: "include",
+    body: "data=" + JSON.stringify(data),
+  });
+}; */
 
 /**
  * Funcion para mostrar u ocultar la pantalla de transwicion

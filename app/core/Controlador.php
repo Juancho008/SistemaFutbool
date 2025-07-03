@@ -45,11 +45,11 @@ class Controlador
 	/**
 	 * Carga (require_once) el Header incluido en app/vistas/inc/
 	 */
-	public function header()
+	public function header($header = 'header.php')
 	{
-		if (file_exists('../app/vistas/inc/header.php')) {
+		if (file_exists('../app/vistas/inc/'.$header)) {
 			$datos = $this->modelo('Login')->obtenerUsuario();
-			require_once '../app/vistas/inc/header.php';
+			require_once '../app/vistas/inc/'.$header;
 			$this->helper('constantes_js');
 			$this->menu($datos['id_perfil']);
 		} else {

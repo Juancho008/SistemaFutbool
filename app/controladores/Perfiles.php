@@ -40,6 +40,7 @@ class Perfiles extends Controlador
 		$datos = [
 			'perfiles' => $this->perfil->listarPerfiles()
 		];
+	
 		$this->header();
 		$this->vista('paginas/perfiles/listado', $datos);
 		$this->footer();

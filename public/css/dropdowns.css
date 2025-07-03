@@ -1,0 +1,17 @@
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }

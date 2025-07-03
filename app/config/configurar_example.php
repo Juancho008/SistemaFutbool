@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * En este archivo se crearan todas las constantes del sistema.
+ * todas las constantes deben estar definidas EN MAYUSCULAS
+ * Aca se debe defin como constantes a utilizar las carpetas de archivos adjuntos, expedientes, otras referencias estaticas
+ * RECORDAR: No debe existir referencia a una carpeta que no sea una CONSTANTE predefinida.
+ */
+
 //Configuracion de acceso a la BD
 define('DB_HOST', 'localhost');
 define('DB_PUERTO', '3306');
@@ -21,12 +28,14 @@ $servidor = $_SERVER["SERVER_NAME"] . ':' . $_SERVER['SERVER_PORT'];
 /**
  * Se utiliza para las referencias a las llamadas de todos los archivos
  */
-define('RUTA_URL', $protocol . $servidor . '/mvcbase');
+define('RUTA_URL', $protocol . $servidor . '/suministros');
 //Definir las carpetas a utilizar de las librerias a incorporar
 define('URL_LIB', RUTA_URL . '/lib');
 define('URL_JS', RUTA_URL . '/public/js');
 define('URL_CSS', RUTA_URL . '/public/css');
 define('URL_IMG', RUTA_URL . '/public/img');
+define('URL_IMG_PRODUCTO', RUTA_URL . '/app/imagenes/producto/');
+define('URL_VENDOR', RUTA_URL . '/public/vendor');
 define('URL_COMPONENTES', RUTA_URL . '/vendor/components');
 
 //Definir dominio para las cookies
