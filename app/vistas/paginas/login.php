@@ -16,35 +16,27 @@
 
 </head>
 
-<body>
-  <main>
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-4">
-          <img class="mt_per_logo" src='' alt='logo'>
-          <div class="card p-4 mt_per card-transp">
-            <h1 class="titulo-sistema">
-              <?php echo TITULO_SISTEMA ?>
-            </h1>
-            <div class="card-body ">
-              <form action="<?php echo RUTA_URL ?>/Acceso/ingresar" method="post">
-                <div class="form-group">
-                  <label class='label-usuario' for="usuario">Usuario</label>
-                  <input type="text" name="usuario" id="email" class="form-control" placeholder="Ingrese su Usuario">
-                </div>
-                <div class="form-group mb-4">
-                  <label class='label-password' for="password">Contraseña</label>
-                  <input type="password" name="clave" id="password" class="form-control" placeholder="Ingrese su Contraseña">
-                </div>
-                <button type="submit" id="login" class="btn btn-block login-btn">Ingresar</button>
-            </div>
-            </form>
-          </div>
-        </div>
+ <body>
+  <div class="box">
+    <form action="<?php echo RUTA_URL ?>/Acceso/ingresar" method="post">
+      <div class="input-box">
+        <h2>Sign In</h2>
+        <input type="text" required>
+        <span>Username</span>
+        <i></i>
       </div>
-    </div>
-  </main>
-
+      <div class="input-box">
+        <input type="password" required>
+        <span>Enter Password</span>
+        <i></i>
+      </div>
+      <input type="submit" id="login" value="Login">
+      <div class="links">
+        <a href="#">Forgot Password?</a>
+        <a href="#">Sign Up</a>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>
